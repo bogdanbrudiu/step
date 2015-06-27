@@ -23,10 +23,121 @@ Keen.ready(function(){
 });
 
 
+  var query = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p1",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("averagep1"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p2",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("averagep2"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p3",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("averagep3"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p4",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("averagep4"), {
+    // Custom configuration here
+  });
 
 
 
+  
+   var p1 = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p1",
+    timezone: "UTC"
+  });
+  var p2 = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p2",
+    timezone: "UTC"
+  });
+  var p3 = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p3",
+    timezone: "UTC"
+  });
+  var p4 = new Keen.Query("average", {
+    eventCollection: "step",
+    targetProperty: "p4",
+    timezone: "UTC"
+  });
 
+  $(".p1").knob({
+    'angleArc':250,
+    'angleOffset':-125,
+    'readOnly':true,
+    'min':0,
+    'max':1000,
+    'fgColor': Keen.Dataviz.defaults.colors[1],
+    height: 290,
+    width: '95%'
+  });
+  client.run(p1, function(err, res){
+    $(".p1").val(res.result).trigger('change');
+  });
+  
+  $(".p2").knob({
+    'angleArc':250,
+    'angleOffset':-125,
+    'readOnly':true,
+    'min':0,
+    'max':1000,
+    'fgColor': Keen.Dataviz.defaults.colors[1],
+    height: 290,
+    width: '95%'
+  });
+  client.run(p2, function(err, res){
+    $(".p2").val(res.result).trigger('change');
+  });
+  
+  $(".p3").knob({
+    'angleArc':250,
+    'angleOffset':-125,
+    'readOnly':true,
+    'min':0,
+    'max':1000,
+    'fgColor': Keen.Dataviz.defaults.colors[1],
+    height: 290,
+    width: '95%'
+  });
+  client.run(p3, function(err, res){
+    $(".p3").val(res.result).trigger('change');
+  });
+  
+  $(".p4").knob({
+    'angleArc':250,
+    'angleOffset':-125,
+    'readOnly':true,
+    'min':0,
+    'max':1000,
+    'fgColor': Keen.Dataviz.defaults.colors[1],
+    height: 290,
+    width: '95%'
+  });
+  client.run(p4, function(err, res){
+    $(".p4").val(res.result).trigger('change');
+  });
 
 
 

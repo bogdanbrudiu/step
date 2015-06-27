@@ -27,10 +27,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="https://keen.io">Home</a></li>
-          <li><a href="https://keen.io/team">Team</a></li>
-          <li><a href="https://github.com/keenlabs/dashboards/tree/gh-pages/examples/connected-devices">Source</a></li>
-          <li><a href="https://groups.google.com/forum/#!forum/keen-io-devs">Community</a></li><li><a href="http://stackoverflow.com/questions/tagged/keen-io?sort=newest&pageSize=15">Technical Support</a></li>
+          <li><a href="http://bogdanbrudiu.github.io/step/dashboard">Home</a></li>
         </ul>
       </div>
     </div>
@@ -39,83 +36,21 @@
 
 
   <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-sm-6">
-
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Traffic Stats
-          </div>
-          <div class="chart-stage">
-            <div class="row">
-              <div class="col-xs-3">
-                <div class="tabbable tabs-left">
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="#visitors" data-toggle="tab">Visitors</a></li>
-                    <li><a href="#browser" data-toggle="tab">Browser</a></li>
-                    <li><a href="#geography" data-toggle="tab">Geography</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xs-9">
-                <div class="tab-content">
-                 <div class="tab-pane active" id="visitors"></div>
-                 <div class="tab-pane" id="browser"></div>
-                 <div class="tab-pane" id="geography"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-sm-6">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Stats
-          </div>
-          <div class="chart-stage">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  New Activations Today
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="users" value="0"/>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  Device Crashes Today
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="errors" value="0"/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
     <div class="row">
 
       <div class="col-sm-6">
         <div class="chart-wrapper">
           <div class="chart-title">
-            Customer Engagement
+            Count
           </div>
-          <div class="chart-stage">
-            <div id="chart-05"></div>
+          <div id="stepcount">
           </div>
-          <div class="chart-notes">
-          </div>
+       
         </div>
       </div>
-
-      <div class="col-sm-6" id="mapwrap">
+ <div class="col-sm-6" id="mapwrap">
         <div class="chart-wrapper">
           <div class="chart-title">
             <div class="btn-group-xs">Active Users
@@ -131,6 +66,7 @@
           </div>
         </div>
       </div>
+     
     </div>
 
   <!-- Mapbox.js Assets -->

@@ -1,4 +1,26 @@
-
+body {
+    /* Location of the image */
+  background-image: url(bg.jpg) !important;
+  
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center !important;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat !important;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed !important;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover !important;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+}
 #mapwrap .chart-title { border: medium none; }
 #mapwrap .chart-stage { height: 350px; }
 #map {
@@ -133,3 +155,9 @@
 }
 
 
+.navbar-inverse{
+
+  background-color:transparent !important;
+  height: 57px;
+  border-color: #ffffff !important;
+}

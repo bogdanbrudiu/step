@@ -1,171 +1,154 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset='utf-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-  <title>Connected Devices</title>
-
-  <link rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="../../assets/css/keen-dashboards.css" />
-  <link rel="stylesheet" type="text/css" href="connected-devices.css" />
-</head>
-<body class="application">
-
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a class="navbar-brand" href="./">Connected Devices</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="http://bogdanbrudiu.github.io/step/dashboard">Home</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="container-fluid">
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <title>Connected Devices</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../assets/css/keen-dashboards.css" />
+    <link rel="stylesheet" type="text/css" href="connected-devices.css" />
    
+</head>
 
-    <div class="row">
-  <div class="col-sm-2">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Count
-          </div>
-          <div id="stepcount">
-          </div>
-       
-        </div>
-      </div>
-      <div class="col-sm-2">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Average p1
-          </div>
-          <div id="averagep1">
-          </div>
-       
-        </div>
-      </div>
-	    <div class="col-sm-2">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-             Average p2
-          </div>
-          <div id="averagep2">
-          </div>
-       
-        </div>
-      </div>
-	    <div class="col-sm-2">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-             Average p3
-          </div>
-          <div id="averagep3">
-          </div>
-       
-        </div>
-      </div>
-	    <div class="col-sm-2">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-             Average p4
-          </div>
-          <div id="averagep4">
-          </div>
-       
-        </div>
-      </div>
-	  
- <div class="col-sm-6">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Stats
-          </div>
-          <div class="chart-stage">
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  Average p1
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="p1" value="0"/>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  Average p2
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="p2" value="0"/>
-                </div>
-              </div>
-			   <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  Average p3
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="p3" value="0"/>
-                </div>
-              </div>
-			   <div class="col-sm-6">
-                <div class="chart-title knob-title">
-                  Average p4
-                </div>
-                <div class="chart-stage">
-                  <input type="text" class="p4" value="0"/>
-                </div>
-              </div>
+<body class="application">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="login.html">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="navbar-brand" href="./"><img src="LOGO.png" style="width:90px; margin-top:-9px"></a>
             </div>
-          </div>
-        </div>
-      </div>	  
-	  
- <div class="col-sm-6" id="mapwrap">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            <div class="btn-group-xs">Active Users
-              <button type="button" id="7days" class="btn btn-default">7 Days</button>
-              <button type="button" id="14days" class="btn btn-default">14 Days</button>
-              <button type="button" id="28days" class="btn btn-default">28 Days</button>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                </ul>
             </div>
-          </div>
-          <div class="chart-stage">
-            <div id="map"></div>
-          </div>
-          <div class="chart-notes">
-          </div>
         </div>
-      </div>
-     
     </div>
-
-  <!-- Mapbox.js Assets -->
-  <script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
-  <script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-heat/v0.1.0/leaflet-heat.js'></script>
-
-  <script type="text/javascript" src="../../assets/lib/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="../../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../../assets/lib/jquery-knob/dist/jquery.knob.min.js"></script>
-
-  <script type="text/javascript" src="../../assets/lib/keen-js/dist/keen.min.js"></script>
-  <script type="text/javascript" src="../../assets/js/meta.js"></script>
-
-  <script type="text/javascript" src="connected-devices.js"></script>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Count
+                    </div>
+                    <div id="stepcount">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Average p1
+                    </div>
+                    <div id="averagep1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Average p2
+                    </div>
+                    <div id="averagep2">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Average p3
+                    </div>
+                    <div id="averagep3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Average p4
+                    </div>
+                    <div id="averagep4">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Stats
+                    </div>
+                    <div class="chart-stage">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="chart-title knob-title">
+                                    Average p1
+                                </div>
+                                <div class="chart-stage">
+                                    <input type="text" class="p1" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="chart-title knob-title">
+                                    Average p2
+                                </div>
+                                <div class="chart-stage">
+                                    <input type="text" class="p2" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="chart-title knob-title">
+                                    Average p3
+                                </div>
+                                <div class="chart-stage">
+                                    <input type="text" class="p3" value="0" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="chart-title knob-title">
+                                    Average p4
+                                </div>
+                                <div class="chart-stage">
+                                    <input type="text" class="p4" value="0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="mapwrap">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        <div class="btn-group-xs">Active Users
+                            <button type="button" id="7days" class="btn btn-default">7 Days</button>
+                            <button type="button" id="14days" class="btn btn-default">14 Days</button>
+                            <button type="button" id="28days" class="btn btn-default">28 Days</button>
+                        </div>
+                    </div>
+                    <div class="chart-stage">
+                        <div id="map"></div>
+                    </div>
+                    <div class="chart-notes">
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- Mapbox.js Assets -->
+        <script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
+        <script type="text/javascript" src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-heat/v0.1.0/leaflet-heat.js'></script>
+        <script type="text/javascript" src="../../assets/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../../assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../assets/lib/jquery-knob/dist/jquery.knob.min.js"></script>
+        <script type="text/javascript" src="../../assets/lib/keen-js/dist/keen.min.js"></script>
+        <script type="text/javascript" src="../../assets/js/meta.js"></script>
+        <script type="text/javascript" src="connected-devices.js"></script>
 </body>
+
 </html>

@@ -31,7 +31,7 @@ body {
   right: 5px;
 }
 
-.chart-wrapper { min-height: 360px; }
+.chart-wrapper { min-height: 140px; }
 
 .chart-stage .knob-title {
   border-bottom: medium none;

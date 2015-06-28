@@ -17,24 +17,6 @@ Keen.ready(function(){
 
 
 
-var select_unique = new Keen.Query("select_unique", {
-  eventCollection: "step",
-  targetProperty: "user.email"
-});
-
-// Send query
-client.run(select_unique, function(err, response){
-  // if (err) handle the error
-  console.log(response.result); // ["bob@aol.com", "joe@yahoo.biz", "travis@gmail.com"]
-});
-
-// Send query
-client.run(query, function(err, response){
-  // if (err) handle the error
-  console.log('result is: ', response.result);
-});
-
-
  var query = new Keen.Query("count", {
     eventCollection: "step",
     timezone: "UTC"

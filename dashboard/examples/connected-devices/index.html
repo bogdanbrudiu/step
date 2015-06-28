@@ -42,96 +42,180 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Average p1
-                    </div>
-                    <div id="averagep1">
-                    </div>
+          <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Maximum p1
+          </div>
+          <div id="maximump1">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Maximum p2
+          </div>
+          <div id="maximump2">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Maximum p3
+          </div>
+          <div id="maximump3">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Maximum p4
+          </div>
+          <div id="maximump4">
+          </div>
+       
+        </div>
+      </div>
+	  
+	  
+	  
+      <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Minimum p1
+          </div>
+          <div id="minimump1">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Minimum p2
+          </div>
+          <div id="minimump2">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Minimum p3
+          </div>
+          <div id="minimump3">
+          </div>
+       
+        </div>
+      </div>
+	    <div class="col-sm-2">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+             Minimum p4
+          </div>
+          <div id="minimump4">
+          </div>
+       
+        </div>
+      </div>
+	  
+ <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Stats
+          </div>
+          <div class="chart-stage">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="chart-title knob-title">
+                  Average p1
                 </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Average p2
-                    </div>
-                    <div id="averagep2">
-                    </div>
+                <div class="chart-stage">
+                  <input type="text" class="p1" value="0"/>
                 </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Average p3
-                    </div>
-                    <div id="averagep3">
-                    </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="chart-title knob-title">
+                  Average p2
                 </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Average p4
-                    </div>
-                    <div id="averagep4">
-                    </div>
+                <div class="chart-stage">
+                  <input type="text" class="p2" value="0"/>
                 </div>
+              </div>
+			   <div class="col-sm-3">
+                <div class="chart-title knob-title">
+                  Average p3
+                </div>
+                <div class="chart-stage">
+                  <input type="text" class="p3" value="0"/>
+                </div>
+              </div>
+			   <div class="col-sm-3">
+                <div class="chart-title knob-title">
+                  Average p4
+                </div>
+                <div class="chart-stage">
+                  <input type="text" class="p4" value="0"/>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-6">
+          </div>
+        </div>
+      </div>	  
+	  
+	  
+	      <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+function initialize() {
+  var myLatlng = new google.maps.LatLng(45.746591,21.234166);
+  var mapOptions = {
+    zoom: 20,
+    center: myLatlng,
+	mapTypeId: google.maps.MapTypeId.SATELLITE
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var marker1 = new google.maps.Marker({position: new google.maps.LatLng(45.74659153823345,21.23416607270132), map: map, title: 'm1'});
+  var marker2 = new google.maps.Marker({position: new google.maps.LatLng(45.74658181522577,21.23417621480416), map: map, title: 'm2'});
+  var marker3 = new google.maps.Marker({position: new google.maps.LatLng(45.74658516798704,21.23418862002085), map: map, title: 'm3'});
+  var marker4 = new google.maps.Marker({position: new google.maps.LatLng(45.74657913301675,21.23420949095975), map: map, title: 'm4'});
+  var marker5 = new google.maps.Marker({position: new google.maps.LatLng(45.74657913301675,21.23420949095975), map: map, title: 'm5'});
+  var marker6 = new google.maps.Marker({position: new google.maps.LatLng(45.74654950298904,21.23418090866993), map: map, title: 'm6'});
+  var marker7 = new google.maps.Marker({position: new google.maps.LatLng(45.74662108444213,21.23419331388663), map: map, title: 'm7'});
+  var marker8 = new google.maps.Marker({position: new google.maps.LatLng(45.74665595315932,21.23416339049231), map: map, title: 'm8'});
+  var marker9 = new google.maps.Marker({position: new google.maps.LatLng(45.7466950128281,21.23407797889899), map: map, title: 'm9'});
+  var marker10 = new google.maps.Marker({position: new google.maps.LatLng(45.74668541554897,21.23406138273071), map: map, title: 'm10'});
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+	  
+	  
+            <div class="col-sm-12" id="mapwrap">
                 <div class="chart-wrapper">
                     <div class="chart-title">
-                        Stats
-                    </div>
-                    <div class="chart-stage">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="chart-title knob-title">
-                                    Average p1
-                                </div>
-                                <div class="chart-stage">
-                                    <input type="text" class="p1" value="0" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="chart-title knob-title">
-                                    Average p2
-                                </div>
-                                <div class="chart-stage">
-                                    <input type="text" class="p2" value="0" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="chart-title knob-title">
-                                    Average p3
-                                </div>
-                                <div class="chart-stage">
-                                    <input type="text" class="p3" value="0" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="chart-title knob-title">
-                                    Average p4
-                                </div>
-                                <div class="chart-stage">
-                                    <input type="text" class="p4" value="0" />
-                                </div>
-                            </div>
+                        <div class="btn-group-xs">Steps
+                          
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6" id="mapwrap">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        <div class="btn-group-xs">Active Users
-                            <button type="button" id="7days" class="btn btn-default">7 Days</button>
-                            <button type="button" id="14days" class="btn btn-default">14 Days</button>
-                            <button type="button" id="28days" class="btn btn-default">28 Days</button>
-                        </div>
-                    </div>
                     <div class="chart-stage">
-                        <div id="map"></div>
+                        <div id="map-canvas"></div>
                     </div>
                     <div class="chart-notes">
                     </div>

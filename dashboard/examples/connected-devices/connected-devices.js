@@ -17,13 +17,22 @@ Keen.ready(function(){
 
 
 
-        var url = client.url("/events/step");
-        // returns https://api.keen.io/3.0/projects/YOUR_PROJECT_ID/events/EVENT_NAME
+var select_unique = new Keen.Query("select_unique", {
+  eventCollection: "step",
+  targetProperty: "user.email"
+});
 
-        client.get(url, null, client.masterKey(), function(err, res) {
-            // if (err) handle the error
-            console.log(res);
-        });
+// Send query
+client.run(select_unique, function(err, response){
+  // if (err) handle the error
+  console.log(response.result); // ["bob@aol.com", "joe@yahoo.biz", "travis@gmail.com"]
+});
+
+// Send query
+client.run(query, function(err, response){
+  // if (err) handle the error
+  console.log('result is: ', response.result);
+});
 
 
  var query = new Keen.Query("count", {
@@ -37,43 +46,77 @@ Keen.ready(function(){
 });
 
 
-  var query = new Keen.Query("average", {
+   var query = new Keen.Query("maximum", {
     eventCollection: "step",
     targetProperty: "p1",
     timezone: "UTC"
   });
-  client.draw(query, document.getElementById("averagep1"), {
+  client.draw(query, document.getElementById("maximump1"), {
     // Custom configuration here
   });
   
-    var query = new Keen.Query("average", {
+    var query = new Keen.Query("maximum", {
     eventCollection: "step",
     targetProperty: "p2",
     timezone: "UTC"
   });
-  client.draw(query, document.getElementById("averagep2"), {
+  client.draw(query, document.getElementById("maximump2"), {
     // Custom configuration here
   });
   
-    var query = new Keen.Query("average", {
+    var query = new Keen.Query("maximum", {
     eventCollection: "step",
     targetProperty: "p3",
     timezone: "UTC"
   });
-  client.draw(query, document.getElementById("averagep3"), {
+  client.draw(query, document.getElementById("maximump3"), {
     // Custom configuration here
   });
   
-    var query = new Keen.Query("average", {
+    var query = new Keen.Query("maximum", {
     eventCollection: "step",
     targetProperty: "p4",
     timezone: "UTC"
   });
-  client.draw(query, document.getElementById("averagep4"), {
+  client.draw(query, document.getElementById("maximump4"), {
     // Custom configuration here
   });
 
-
+var query = new Keen.Query("minimum", {
+    eventCollection: "step",
+    targetProperty: "p1",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("minimump1"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("minimum", {
+    eventCollection: "step",
+    targetProperty: "p2",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("minimump2"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("minimum", {
+    eventCollection: "step",
+    targetProperty: "p3",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("minimump3"), {
+    // Custom configuration here
+  });
+  
+    var query = new Keen.Query("minimum", {
+    eventCollection: "step",
+    targetProperty: "p4",
+    timezone: "UTC"
+  });
+  client.draw(query, document.getElementById("minimump4"), {
+    // Custom configuration here
+  });
 
   
    var p1 = new Keen.Query("average", {
@@ -152,7 +195,6 @@ Keen.ready(function(){
   client.run(p4, function(err, res){
     $(".p4").val(res.result).trigger('change');
   });
-
 
 
 
